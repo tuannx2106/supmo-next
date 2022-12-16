@@ -1,0 +1,28 @@
+@import 'reset';
+
+:root {
+  --cl-white: #ffffff;
+  --cl-gray-1: #333333;
+
+  --cl-gray-100: #F2F4F7;
+  --cl-gray-300: #D0D5DD;
+  --cl-gray-500: #667085;
+  --cl-gray-600: #475467;
+  --cl-gray-700: #344054;
+  
+  --cl-primary: #F9F5FF;
+
+  --cl-purple: #942F70;
+  --cl-yellow: #FEF452;
+  --cl-dark-blue: #14597A;
+}
+
+body {
+  color: rbg(--foreground-rgb);
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
