@@ -1,0 +1,90 @@
+@import 'styles';
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(138.11deg, var(--cl-yellow) 0%, var(--cl-purple) 121.92%);
+  padding: 0 16px 64px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  margin-top: 80px;
+}
+
+.eventTitle {
+  display: inline;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--cl-white);
+  background-color: var(--cl-purple);
+  word-break: break-word;
+  font-family: var(--font-family-primary);
+}
+
+.dateTime {
+  display: flex;
+  gap: 36px;
+  margin: 32px 0 28px;
+}
+
+.capacityCostArea {
+  display: flex;
+  gap: 32px;
+}
+
+.eventInfo {
+  width: 50%;
+  padding-top: 32px;
+  z-index: 1;
+}
+
+.eventImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  img {
+    width: 100%;
+    max-width: 740px;
+    border-radius: 0px 64px;
+  }
+}
+
+.infoItemLg,
+.infoItem {
+  @extend %flex-center-vertical;
+
+  gap: 8px;
+  line-height: 40px;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+}
+
+.infoItemLg {
+  font-size: 28px;
+
+  img {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.infoItem {
+  font-size: 16px;
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.description {
+  @extend %text-lg;
+
+  font-weight: 400;
+  width: 50%;
+  white-space: pre-line;
+  margin-top: 32px;
+}

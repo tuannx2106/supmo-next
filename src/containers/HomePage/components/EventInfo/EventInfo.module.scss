@@ -1,0 +1,27 @@
+.eventTitle {
+  display: inline;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--cl-white);
+  background-color: var(--cl-purple);
+  word-break: break-word;
+  font-family: var(--font-family-primary);
+}
+
+.dateTime {
+  display: flex;
+  gap: 16px;
+  margin: 28px 0;
+
+  .date,
+  .time {
+    width: 50%;
+  }
+}
+
+.capacityCostArea {
+  display: flex;
+  margin-top: 12px;
+  gap: 36px;
+}

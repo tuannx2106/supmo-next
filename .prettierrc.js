@@ -1,6 +1,6 @@
 module.exports = {
   // -> allows 3 vertical windows
-  printWidth: 120,
+  printWidth: 30,
 
   // -> use less screen width
   tabWidth: 2,

@@ -7,11 +7,11 @@ type TagProps = {
   children: string
   type?: 'default' | 'purple'
   size?: 'default' | 'large'
-  onClose?: () => void
+  onRemove?: () => void
   onClick?: () => void
 }
 
-const Tag = ({ children, type = 'default', size = 'default', onClose, onClick }: TagProps) => (
+const Tag = ({ children, type = 'default', size = 'default', onRemove, onClick }: TagProps) => (
   <div
     role="presentation"
     onClick={onClick}
@@ -22,11 +22,11 @@ const Tag = ({ children, type = 'default', size = 'default', onClose, onClick }:
     })}
   >
     <span className={s.text}>{children}</span>
-    {onClose && (
+    {onRemove && (
     <IconClose
       onClick={(e) => {
         e.stopPropagation()
-        onClose()
+        onRemove()
       }}
       className={s.icon}
     />
