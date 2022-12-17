@@ -13,3 +13,18 @@
   justify-content: center;
   align-items: center;
 }
+
+%text-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.428;
+}
+
+%text-md {
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+}
+
+%text-lg {
+  font-size: var(--font-size-lg);
+  line-height: 1.55;
+}

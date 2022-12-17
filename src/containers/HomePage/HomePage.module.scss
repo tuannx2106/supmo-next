@@ -1,0 +1,82 @@
+@import 'styles';
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(138.11deg, var(--cl-yellow) 0%, var(--cl-purple) 121.92%);
+  padding: 0 16px 16px;
+}
+
+.eventTitle {
+  display: inline;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--cl-white);
+  background-color: var(--cl-purple);
+  word-break: break-word;
+  font-family: var(--font-family-primary);
+}
+
+.hero {
+  display: flex;
+  margin-top: 80px;
+  gap: 20px;
+}
+
+.dateTime {
+  display: flex;
+  gap: 16px;
+  margin: 28px 0;
+
+  .date,
+  .time {
+    width: 50%;
+  }
+}
+
+.capacityCostArea {
+  display: flex;
+  margin-top: 12px;
+  gap: 36px;
+}
+
+.form {
+  flex: 1;
+}
+
+.btnAddBanner {
+  @extend %flex-center;
+
+  width: 739px;
+  height: 445px;
+  border-radius: 0px 64px;
+  border: 1px dashed var(--cl-gray-600);
+  background: rgba(242, 242, 242, 0.1);
+  color: var(--cl-dark-blue);
+  font-weight: 600;
+
+  img {
+    width: 24px;
+    margin-right: 16px;
+  }
+}
+
+.formLower {
+  width: 100%;
+  max-width: 640px;
+}
+
+.descriptionFormField {
+  margin-bottom: 32px;
+
+  p {
+    @extend %text-sm;
+
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+}
+
+.btnCreate {
+  width: 100%;
+}

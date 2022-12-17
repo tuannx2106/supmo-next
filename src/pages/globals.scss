@@ -3,6 +3,7 @@
 :root {
   --cl-white: #ffffff;
   --cl-gray-1: #333333;
+  --cl-gray-6: #F2F2F2;
 
   --cl-gray-100: #F2F4F7;
   --cl-gray-300: #D0D5DD;
@@ -15,14 +16,51 @@
   --cl-purple: #942F70;
   --cl-yellow: #FEF452;
   --cl-dark-blue: #14597A;
+
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+
+  --line-height-base: 1.5;
+  --font-weight-base: 400;
+
+  --font-family-primary: 'Neue Haas Grotesk Display Pro', sans-serif;
 }
 
-body {
-  color: rbg(--foreground-rgb);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('/fonts/NeueHaasDisplay-Bold.eot');
+  src: url('/fonts/NeueHaasDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/NeueHaasDisplay-Bold.woff2') format('woff2'),
+    url('/fonts/NeueHaasDisplay-Bold.woff') format('woff'),
+    url('/fonts/NeueHaasDisplay-Bold.ttf') format('truetype'),
+    url('/fonts/NeueHaasDisplay-Bold.svg#NeueHaasDisplay-Bold') format('svg');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('/fonts/NeueHaasDisplay-Mediu.eot');
+  src: url('/fonts/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+    url('/fonts/NeueHaasDisplay-Mediu.woff') format('woff'),
+    url('/fonts/NeueHaasDisplay-Mediu.ttf') format('truetype'),
+    url('/fonts/NeueHaasDisplay-Mediu.svg#NeueHaasDisplay-Mediu') format('svg');
+  font-weight: 600;
+}
+
+html {
+  color: var(cl-gray-1);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+body {  
 }

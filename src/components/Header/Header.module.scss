@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.navList {
+  display : flex;
+  gap: 48px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

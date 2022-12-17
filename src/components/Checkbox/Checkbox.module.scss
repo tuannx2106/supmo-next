@@ -1,0 +1,20 @@
+@import 'styles';
+
+.root {
+  @extend %flex-center-vertical;
+  gap: 12px;
+}
+
+.checkbox {
+  border: 1px solid var(--cl-gray-300);
+  border-radius: 6px;
+  height: 20px;
+  width: 20px;
+}
+
+.text {
+  @extend %text-sm;
+  
+  color: var(--cl-gray-700);
+  font-weight: 500;
+}

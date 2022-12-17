@@ -1,0 +1,49 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  color: var(--cl-gray-700);
+  margin-bottom: 32px;
+  padding: 32px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background-color: var(--cl-white);
+}
+
+.headlineSetting {
+  display: inline-block;
+  padding: 0 12px;
+  color: var(--cl-purple);
+  background-color: var(--cl-yellow);
+  font-size: 32px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.privacyLabel,
+.tagLabel {
+  font-weight: 500;
+}
+
+.privacyLabel {
+  margin-bottom: 8px;
+}
+
+.tagLabel {
+  margin-bottom: 2px;
+}
+
+.tagSubLabel {
+  color: var(--cl-gray-600);
+}
+
+.activeTags,
+.tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tags {
+  margin-top: 16px
+}

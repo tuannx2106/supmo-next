@@ -1,0 +1,44 @@
+@import 'styles';
+
+.tag {
+  @extend %flex-center-vertical;
+
+  background-color: var(--cl-gray-100);
+  border-radius: 16px;
+  padding: 2px 10px;
+  transition: opacity 0.3s ease-in-out;
+
+  &.isClickable {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.isPurple {
+    background-color: var(--cl-primary);
+
+    .text,
+    .icon {
+      color: var(--cl-purple);
+    }
+  }
+
+  &.isLg {
+    padding: 4px 12px;
+  }
+}
+
+.text {
+  @extend %text-sm;
+  
+  font-weight: 500;
+  color: var(--cl-gray-700);
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 4px;
+  color: var(--cl-gray-700);
+}

@@ -1,0 +1,26 @@
+@import 'styles';
+
+.radio {
+  @extend %flex-center-vertical;
+
+  gap: 12px;
+}
+
+.radioInput {
+  border: 1px solid var(--cl-gray-300);
+  width: 20px;
+  height: 20px;
+}
+
+.radioText {
+  font-size: var(--font-size-sm);
+  line-height: 1.71;
+  font-weight: 400;
+  color: var(--cl-gray-600);
+}
+
+.radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
