@@ -8,29 +8,49 @@ type Props = {
   onChange: (value: Partial<EventSocial>) => void
 }
 
-const EventInfo = ({ onChange }: Props) => {
-  const [date, setDate] = useState<string>('')
-  const [time, setTime] = useState<string>('')
-  const [location, setLocation] = useState<string>('')
-  const [capacity, setCapacity] = useState<string>('')
-  const [cost, setCost] = useState<string>('')
+const EventInfo = React.memo(({ onChange }: Props) => {
+  const [title, setTitle] = useState('')
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [location, setLocation] = useState('')
+  const [capacity, setCapacity] = useState('')
+  const [cost, setCost] = useState('')
+
+  const [isEditingTitle, setIsEditingTitle] = useState(false)
 
   useEffect(() => {
-    // all field a required
-    if (!date || !time || !location || !capacity || !cost) return
-    const _startAt = dayjs(`${date} ${time}`).toISOString()
+    const _startAt = date && time ? dayjs(`${date} ${time}`).toISOString() : ''
 
     onChange({
+      title,
       startAt: _startAt,
       venue: location,
       price: parseInt(cost, 10),
       capacity: parseInt(capacity, 10),
     })
-  }, [date, time, location, capacity, cost, onChange])
+  }, [date, time, location, capacity, cost, onChange, title])
 
   return (
     <>
-      <h1 className={s.eventTitle}>Untitled Event</h1>
+
+      {!isEditingTitle ? (
+        <h1
+          role="presentation"
+          onClick={() => setIsEditingTitle(true)}
+          className={s.eventTitle}
+        >
+          {title || 'Untitled event'}
+        </h1>
+      ) : (
+        <Input
+          variant="large"
+          placeholder="Event title"
+          autoFocus={isEditingTitle}
+          value={title}
+          onBlur={() => setIsEditingTitle(false)}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      )}
       <div className={s.dateTime}>
         <Input
           wrapperClassName={s.date}
@@ -75,6 +95,6 @@ const EventInfo = ({ onChange }: Props) => {
       </div>
     </>
   )
-}
+})
 
 export default EventInfo

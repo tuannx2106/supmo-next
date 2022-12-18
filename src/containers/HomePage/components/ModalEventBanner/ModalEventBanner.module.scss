@@ -1,0 +1,44 @@
+@import 'styles';
+
+.btnAddBanner {
+  @extend %flex-center;
+
+  cursor: pointer;
+  width: 739px;
+  height: 445px;
+  border-radius: 0px 64px;
+  border: 1px dashed var(--cl-white);
+  background: rgba(242, 242, 242, 0.1);
+  color: var(--cl-dark-blue);
+  font-weight: 600;
+  background-color: rgba(242, 242, 242, 0.1);
+
+  img {
+    width: 24px;
+    margin-right: 16px;
+  }
+}
+
+.bannerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 188px;
+  height: 120px;
+  overflow: hidden;
+  border: 6px solid transparent;
+
+  &.isActive {
+    border-color: var(--cl-purple);
+  }
+  
+  img {
+    position: absolute;
+    
+    width: 100%;
+  }
+}

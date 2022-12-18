@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import s from './Header.module.scss'
 
-const Header = () => (
+const Header = React.memo(() => (
   <div className={s.root}>
     <div className={s.logo}><img src="/img/img_brand-logo.png" alt="brand name" /></div>
     <ul className={s.navList}>
@@ -13,6 +13,6 @@ const Header = () => (
       <li><Link href="/">Contact</Link></li>
     </ul>
   </div>
-)
+))
 
 export default Header

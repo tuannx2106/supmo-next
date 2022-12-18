@@ -10,6 +10,7 @@
   position: relative;
   display: flex;
   margin-top: 80px;
+  min-height: 445px;
 }
 
 .eventTitle {
@@ -41,14 +42,16 @@
 }
 
 .eventImg {
+  max-width: 740px;
+  height: 445px;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
+  border-radius: 0px 64px;
 
   img {
     width: 100%;
-    max-width: 740px;
-    border-radius: 0px 64px;
   }
 }
 

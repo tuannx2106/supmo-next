@@ -11,7 +11,7 @@ type Props = {
   onChange: (value: Partial<EventSocial>) => void
 }
 
-const EventSetting = ({ onChange }: Props) => {
+const EventSetting = React.memo(({ onChange }: Props) => {
   const [isManualApprove, setIsManualApprove] = useState<boolean>(false)
   const [privacy, setPrivacy] = useState<string>('')
   const [activeTags, setActiveTags] = useState<string[]>(['Engineering'])
@@ -78,6 +78,6 @@ const EventSetting = ({ onChange }: Props) => {
       </div>
     </div>
   )
-}
+})
 
 export default EventSetting

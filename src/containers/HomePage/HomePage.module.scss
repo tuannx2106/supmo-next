@@ -19,14 +19,16 @@
 .btnAddBanner {
   @extend %flex-center;
 
+  cursor: pointer;
   width: 739px;
   height: 445px;
   border-radius: 0px 64px;
   border: 1px dashed var(--cl-white);
-  background: rgba(242, 242, 242, 0.1);
   color: var(--cl-dark-blue);
   font-weight: 600;
   background-color: rgba(242, 242, 242, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   img {
     width: 24px;
