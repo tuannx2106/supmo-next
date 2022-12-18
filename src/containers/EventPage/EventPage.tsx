@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import Header from 'components/Header'
 import dayjs from 'dayjs'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { EventSocial } from 'types'
@@ -22,6 +23,10 @@ const EventPage = () => {
 
   return (
     <div className={s.root}>
+      <Head>
+        <title>{eventSocial?.title}</title>
+      </Head>
+
       <div className="container">
         <Header />
 
