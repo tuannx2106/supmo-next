@@ -1,12 +1,9 @@
+@import 'styles';
+
 .eventTitle {
+  @extend %text-social-event-title;
+
   display: inline;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
-  color: var(--cl-white);
-  background-color: var(--cl-purple);
-  word-break: break-word;
-  font-family: var(--font-family-primary);
 }
 
 .dateTime {

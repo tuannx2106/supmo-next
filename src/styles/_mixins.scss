@@ -28,3 +28,13 @@
   font-size: var(--font-size-lg);
   line-height: 1.55;
 }
+
+%text-social-event-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--cl-white);
+  background-color: var(--cl-purple);
+  word-break: break-word;
+  font-family: var(--font-family-primary);
+}

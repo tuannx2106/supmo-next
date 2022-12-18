@@ -9,6 +9,7 @@ import EventSettings from './components/EventSettings'
 import s from './HomePage.module.scss'
 import { createSocialEvent } from './helper'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const HomePage = () => {
   const router = useRouter()
@@ -44,6 +45,10 @@ const HomePage = () => {
 
   return (
     <div className={s.root}>
+      <Head>
+        <title>Create Social Event</title>
+      </Head>
+
       <div className="container">
         <Header />
 
